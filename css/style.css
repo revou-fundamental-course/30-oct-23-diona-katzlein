@@ -27,7 +27,7 @@ a:active {
 .header {
     background-color:rgba(202, 179, 77, 0.521);
     color: rgb(0, 0, 0);
-    height: 90px;
+    height: 80px;
 }
 
 .header-logo {
@@ -39,6 +39,15 @@ a:active {
 .header-list li {
     float: left;
     padding: 33px 20px;
+}
+
+.header-right li {
+    float: right;
+    padding: 33px 20px;
+}
+
+.img-app {
+    height: 40px;
 }
 
 .main {
@@ -58,7 +67,7 @@ a:active {
 }
 
 .contents {
-    height: 500px;
+    height: auto;
     margin-top: 100px;
 }
 
@@ -67,6 +76,13 @@ a:active {
     font-size: 28px;
     padding-bottom: 15px;
     margin-bottom: 50px;
+}
+
+.section-p {
+    border-bottom: 2px solid rgba(85, 209, 81, 0.781);
+    font-size: 12px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;  
 }
 
 .contents-item {
@@ -111,13 +127,18 @@ a:active {
   .footer {
     background-color: #2f5167;
     color: #fff;
-    height: 90px;
-    padding: 40px;
+    height: 100px;
+    padding: 60px;
   }
   
   .footer-logo {
     float: left;
     font-size: 32px;
+  }
+
+  .img-footer {
+    height: 200px;
+    padding-bottom: 20px;
   }
   
   .footer-list {
