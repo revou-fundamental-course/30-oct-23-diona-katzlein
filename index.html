@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-
-    <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no,address=no,email=no">
     <meta name="viewport" content="width=device-width">
     <meta name="robots" content="ALL">
@@ -15,116 +12,94 @@
     <meta name="author" content="Diona Katzlein">
     <meta name="author" content="Azwar Anas">
     <meta name="robots" content="all">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/logo-1-t.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-      
-    <!-- Start Header -->
-    <div class="header">
-        <div class="header-logo">RevoU - KaBMI</div>
-        <div class="header-list">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#bmi">Hitung BMI</a></li>
-            </ul>
-        </div>
-        <div class="header-right">
-            <ul>
-                <li><a href="#app-store-revou-bmi"><img class="img-app" src="img/apple-store.jpg"></a></li>
-                <li><a href="#play-store-co.revou.bmi"><img class="img-app" src="img/google-play.png"></a></li>
-            </ul>
-        </div>
+  <!-- Header and Menu Bar -->
+  <div class="header">
+    <a href="#default" class="logo">KaBMI</a>
+    <div class="header-right">
+      <a href="#play-store-co.revou.bmi"><img class="img-app" src="./img/google-play.png"></a>
+      <a href="#app-store-revou-bmi"><img class="img-app" src="./img/apple-store.jpg"></a>
     </div>
-    <!-- End Header -->
-
-    <!-- Start Main -->
-    <div class="main">
-        <div class="copy-container">
-            <h1>KaBMI<span>.</span> RevoU</h1>
-            <h2>RevoU Task - Create BMI Calculator</h2>
-        </div>
-
-        <!-- Start Contents -->
-        <div class="contents">
-            <h3 class="section-title">Kalkulator BMI</h3>
-            <p class="section-p">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? <br> Yuk, hitung sekarang di kalkulator BMI.</p>
-
-            <form id="form" class="form" aria-label="Kalkulator BMI">
-                <div>
-                  <label class="form-label" for="gender">Jenis Kelamin</label>
-                  <div class="input-group">
-                    <input type="radio" name="gender" id="male" value="Pria" class="form-input-check" checked>
-                    <label for="male">Pria</label>
-                    <input type="radio" name="gender" id="female" value="Wanita" class="form-input-check">
-                    <label for="female">Wanita</label>
-                  </div>
-                  <span id="genderErrorMessage" class="error-message"></span>
-                </div>
-                <div>
-                  <label class="form-label" for="weight">Berat Badan</label>
-                  <div class="input-group">
-                    <span class="input-group-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                        <path
-                          d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z" />
-                      </svg>
-                    </span>
-                    <input type="number" name="weight" id="weight" class="form-input" min="1" aria-describedby="weightDesc">
-                    <span class="input-group-desc" id="weightDesc">Kg</span>
-                  </div>
-                  <span id="weightErrorMessage" class="error-message"></span>
-                </div>
-                <div>
-                  <label class="form-label" for="age">Umur</label>
-                  <div class="input-group">
-                    <span class="input-group-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                        <path
-                          d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z" />
-                      </svg>
-                    </span>
-                    <input type="number" name="age" id="age" class="form-input" min="1" aria-describedby="ageDesc">
-                    <span class="input-group-desc" id="ageDesc">Tahun</span>
-                  </div>
-                  <span id="ageErrorMessage" class="error-message"></span>
-                </div>
-                <div>
-                  <label class="form-label" for="height">Tinggi Badan</label>
-                  <div class="input-group">
-                    <span class="input-group-icon">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
-                        <path
-                          d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z" />
-                      </svg>
-                    </span>
-                    <input type="number" name="height" id="height" class="form-input" min="1" aria-describedby="heightDesc">
-                    <span class="input-group-desc" id="heightDesc">Cm</span>
-                  </div>
-                  <span id="heightErrorMessage" class="error-message"></span>
-                </div>
-                <div>
-                  <button type="button" class="btn" onclick="checkBMI()">Hitung BMI</button>
-                  <button type="reset" class="btn btn-reset">Reset</button>
-                </div>
-              </form>
-        </div>
-        <!-- End Contents -->
-
-    </div>
-    <!-- End Main -->
-
-    <!-- Start Footer -->
-    <div class="footer">
-        <div class="footer-logo">RevoU - KaBMI</div>
-        <div class="footer-list">
+  </div>
+  <!-- End Header and Menu Bar -->
+  <!-- Main -->
+  <main>
+    <!-- HOME FORM -->
+    <section id="home" class="container">
+      <header>
+        <h1 class="title">KALKULATOR INDEX MASSA TUBUH</h1>
+        <p class="paragraph">
+          Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? <br> Yuk, hitung sekarang di kalkulator BMI.
+        </p>
+      </header>
+      <div>
+        <form id="form" class="form" aria-label="Kalkulator BMI" onsubmit="return validasiForm()">
+          <div class="radio-button">
+            <label>Jenis Kelamin</label>
             <ul>
-                <li><a href="#app-store-revou-bmi"><img class="img-app" src="img/apple-store.jpg"></a></li>
-                <li><a href="#play-store-co.revou.bmi"><img class="img-app" src="img/google-play.png"></a></li>
+              <li>
+                <input type="radio" name="ygen" id="ymale" value="Pria" checked required>
+                <label for="male">Pria</label>
+              </li>
+              <li>
+                <input type="radio" name="ygen" id="yfemale" value="Wanita" required>
+                <label for="female">Wanita</label>
+              </li>
             </ul>
-        </div>
-    </div>
-    <!-- End Footer -->
+          </div>
+    
+          <div class="text-input">
+            <label for="umur">Umur</label>
+            <input type="number" name="yage" id="yage" class="form-input" min="1" required>
+          </div>  
+    
+          <div class="text-input">
+            <label for="berat-badan">Berat Badan (kg)</label>
+            <input type="number" name="ybb" id="ybb" class="form-input" min="1" required>
+          </div>  
+  
+          <div class="text-input">
+            <label for="tinggi">Tinggi (cm)</label>
+            <input type="number" name="yting" id="yting" class="form-input" min="1" required>
+          </div> 
+  
+          <div class="text-input">
+            <button type="button" class="btn" onclick="hitungBMI()">Hitung BMI</button>
+            <button type="button" class="btn" onclick="resetForm()">Reset</button>
+          </div> 
+        </form>
+      </div>
+    </section>
+    <!-- END HOME FORM -->
 
-    <link rel="javascript" href="js/script.js">
+    <!-- HASIL HITUNG BMI -->
+    <section id="result" class="container d-hidden">
+      <div class="sub-container mb-1">
+        <h3 id="result-title" class="result-title"></h3>
+        <div id="result-bmi" class="result-bmi"></div>
+        <p id="result-desc" class="result-desc"></p>
+        <button class="btn" onclick="backToForm()">Hitung Lagi</button>
+      </div>
+    </section>
+    <!-- END HASIL BMI -->
+  </main>
+  <!-- END MAIN -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+        <h3>KaBMI</h3>
+        <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat.</p>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy; 2023 <a href="https://github.com/diona-katzleib">Isekai.ID | Diona Katzlein</a> | IDN GAZA#FREEDOM  </p>
+    </div>
+</footer>
+<!-- END FOOTER -->
+
+  <script src="./js/script.js"></script>
 </body>
 </html>
